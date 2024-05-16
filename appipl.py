@@ -7,7 +7,7 @@ first_st_wicket = st.number_input('1st_wicket', value=5, placeholder='Enter wick
 fortheen_th_over = st.number_input('14th_over', value=150, placeholder='Enter run after 14th over')
 second_nd_wicket = st.number_input('2nd_wicket', value=9, placeholder='Enter wicket after 14th over')
 
-loaded_model = pickle.load(open('D:\ipl/ipl_pred.sav', 'rb'))
+loaded_model = pickle.load(open('ipl_pred.sav', 'rb'))
 prediction =loaded_model.predict([[sixth_th_run, first_st_wicket, fortheen_th_over, second_nd_wicket]])
 
 st.subheader(f'Predicted score for the above parameters is {int(prediction[0])}')
